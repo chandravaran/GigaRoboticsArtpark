@@ -1234,10 +1234,15 @@ def create_tree():
 
     # Door sequence end
 
+    '''
+    Note Below 3 can be deleted not used anywhere.
+    '''
     # Countertop & sink detection
     detect_counter_pose1 = SetPredefinedArmPose("look_left", name="DetectCountertop1")
     detect_counter_pose2 = SetPredefinedArmPose("look_left", name="DetectCountertop2")
     detect_counter_pose_up = SetPredefinedArmPose("counter_door_detect", name="DetectCountertopUp")
+
+
     detect_counter = DetectCountertop() 
     get_counter_coordinates = GetCounterCooridnates() 
 
@@ -1255,8 +1260,17 @@ def create_tree():
     has_dustbin_detected = HasDustbinDetected(name="HasDustbinDetected")
     start_dustbin_detection = StartDustbinDetect(name="StartDustbinDetect")
     start_dustbin_fusion = StartDustbinFusion(name="StartDustbinFusion")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''    
     publish_check_dustbin = PublishCheck(name="PublishCheckDustbin", on_or_off="on")
+
     stop_dustbin_detection = StopDustbinDetect(name="StopDustbinDetect")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     publish_check_dustbin_off = PublishCheck(name="PublishCheckDustbinOff", on_or_off="off")
     update_dustbn_fusion = UpdateDustbinFusion(name="UpdateDustbinFusion")
     turn_bot_dustbin = TurnBotDustbin(name="TurnBotDustbin")
@@ -1304,13 +1318,21 @@ def create_tree():
 
     timer_wait = py_trees.behaviours.TickCounter(duration=2)
 
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     drop_trash = DropTrash(name="DropTrash")
+
 
     break_trash_joints = TrashAttach(attach=False, name="DetachTrash")
 
     go_to_tray_up2 = SetPredefinedArmPose("tray_up", name="TrayUp2")
 
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     go_to_tray_top2 = SetPredefinedArmPose("tray_top", name="TrayTop2")
+
 
     go_to_tray_grab2 = SetPredefinedArmPose("tray_grab", name="TrayGrab2")
 
@@ -1392,11 +1414,27 @@ def create_tree():
     trash_detect_pose1 = SetPredefinedArmPose("trash_detect", name="TrashDetect1")
     trash_detect_far_pose1 = SetPredefinedArmPose("trash_detect_far", name="TrashDetectFar1")
     trash_detect_left_pose1 = SetPredefinedArmPose("trash_detect_left", name="TrashDetectLeft1")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     trash_detect_right_pose1 = SetPredefinedArmPose("trash_detect_right", name="TrashDetectRight1")
+    
     trash_detect_lf_pose1 = SetPredefinedArmPose("trash_detect_lf", name="TrashDetectLf1")
+    
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     trash_detect_rf_pose1 = SetPredefinedArmPose("trash_detect_rf", name="TrashDetectRf1")
+   
     trash_detect_left_far_pose1 = SetPredefinedArmPose("trash_detect_left_far", name="TrashDetectLeftFar1")
+   
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     trash_detect_right_far_pose1 = SetPredefinedArmPose("trash_detect_right_far", name="TrashDetectRightFar1")
+    
+    
     trash_detect_lf_far_pose1 = SetPredefinedArmPose("trash_detect_lf_far", name="TrashDetectLfFar1")
     trash_detect_rf_far_pose1 = SetPredefinedArmPose("trash_detect_rf_far", name="TrashDetectRfFar1")
 
@@ -1406,8 +1444,17 @@ def create_tree():
     publish_check4 = PublishCheck(name="PublishCheck4", on_or_off="on")
     publish_check5 = PublishCheck(name="PublishCheck5", on_or_off="on")
     publish_check6 = PublishCheck(name="PublishCheck6", on_or_off="on")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     publish_check7 = PublishCheck(name="PublishCheck7", on_or_off="on")
+    
     publish_check8 = PublishCheck(name="PublishCheck8", on_or_off="on")
+    
+    '''
+    Note Below 2 can be deleted not used anywhere.
+    '''  
     publish_check9 = PublishCheck(name="PublishCheck9", on_or_off="on")
     publish_check10 = PublishCheck(name="PublishCheck10", on_or_off="on")
 
@@ -1417,12 +1464,25 @@ def create_tree():
     publish_check_off4 = PublishCheck(name="PublishCheck4", on_or_off="off")
     publish_check_off5 = PublishCheck(name="PublishCheck5", on_or_off="off")
     publish_check_off6 = PublishCheck(name="PublishCheck6", on_or_off="off")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     publish_check_off7 = PublishCheck(name="PublishCheck7", on_or_off="off")
+    
     publish_check_off8 = PublishCheck(name="PublishCheck8", on_or_off="off")
+    
+    '''
+    Note Below 2 can be deleted not used anywhere.
+    '''  
     publish_check_off9 = PublishCheck(name="PublishCheck9", on_or_off="off")
     publish_check_off10 = PublishCheck(name="PublishCheck10", on_or_off="off")
 
     start_trash_fusion1 = StartFusion(name="TrashFusion1")
+
+    '''
+    Note Below 15 can be deleted not used anywhere.
+    '''  
     start_trash_fusion2 = StartFusion(name="TrashFusion2")
     start_trash_fusion3 = StartFusion(name="TrashFusion3")
     start_trash_fusion4 = StartFusion(name="TrashFusion4")
@@ -1430,7 +1490,6 @@ def create_tree():
     start_trash_fusion6 = StartFusion(name="TrashFusion6")
     start_trash_fusion7 = StartFusion(name="TrashFusion7")
     start_trash_fusion8 = StartFusion(name="TrashFusion8")
-
     end_trash_fusion1 = EndFusion(name="EndTrashFusion1")
     end_trash_fusion2 = EndFusion(name="EndTrashFusion2")
     end_trash_fusion3 = EndFusion(name="EndTrashFusion3")
@@ -1446,8 +1505,17 @@ def create_tree():
     start_detect4 = StartDetect(name="SD4")
     start_detect5 = StartDetect(name="SD5")
     start_detect6 = StartDetect(name="SD6")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''      
     start_detect7 = StartDetect(name="SD7")
+    
     start_detect8 = StartDetect(name="SD8")
+    
+    '''
+    Note Below 2 can be deleted not used anywhere.
+    '''  
     start_detect9 = StartDetect(name="SD9")
     start_detect10 = StartDetect(name="SD10")
 
@@ -1457,8 +1525,16 @@ def create_tree():
     stop_detection4 = StopDetect(name="StopDetection4")
     stop_detection5 = StopDetect(name="StopDetection5")
     stop_detection6 = StopDetect(name="StopDetection6")
+    
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     stop_detection7 = StopDetect(name="StopDetection7")
     stop_detection8 = StopDetect(name="StopDetection8")
+    
+    '''
+    Note Below 2 can be deleted not used anywhere.
+    '''  
     stop_detection9 = StopDetect(name="StopDetection9")
     stop_detection10 = StopDetect(name="StopDetection10")
 
@@ -1568,6 +1644,9 @@ def create_tree():
     detect_sink_left = DetectSink(side="Left") 
     detect_sink_right = DetectSink(side="Right")
 
+    '''
+    Note This sequence is not used
+    '''  
     countertop_spray_sequence = py_trees.composites.Sequence("CountertopSpraySequence", children=[
         go_to_center1,
         go_to_countertop,
@@ -1625,7 +1704,12 @@ def create_tree():
     open_gripper_sponge2 = SetPredefinedGripperPose("sponge_open", name="SpongeGripperOpen2")
     go_to_sponge2 = SetPredefinedArmPose("sponge_grip", name="SpongePose2")
     attach_sponge_base = JointAttach(name="SpongeBaseAttach", link1="sponge", link2="base_footprint", attach=True)
+   
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     grip_sponge2 = SetPredefinedGripperPose("sponge_grip", name="SpongeGrip2")
+    
     detach_sponge_gripper = JointAttach(name="SpongeGripperDetach", link1="sponge", link2="gripper_base_link", attach=False)
     go_to_sponge_up4 = SetPredefinedArmPose("sponge_grip_up", name="SpongeUp4")
     arm_start2 = SetPredefinedArmPose("start", name="ArmStart2")
@@ -1644,24 +1728,40 @@ def create_tree():
     # Place sponge back sequence end
 
     # Countertop wiping sequence
-
+    '''
+    Note Below 5 can be deleted not used anywhere.
+    '''  
     go_to_center2 = GoToGoal(name="Center2", isCenter=True)
     go_to_countertop2 = GoToGoal(name='CountertopGoal2', isCounter=True) 
     counter_align5 = CounterAlign(name="Align5")
     counter_align6 = CounterAlign(name="Align6")
     bot_attach_wipe1 = BotAttach(attach=True, name="BotAttachWipe1")
+    
     bot_attach_wipe2 = BotAttach(attach=True, name="BotAttachWipe2")
     bot_detach_wipe1 = BotAttach(attach=False, name="BotDetachWipe1")
     bot_detach_wipe2 = BotAttach(attach=False, name="BotDetachWipe2")
     counter_align7 = CounterAlign(name="Align7")
     counter_align8 = CounterAlign(name="Align8")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     counter_right2 = GoRight(name="CounterRight2")
+    
     counter_left2 = GoLeft(name="CounterLeft2")
     countertop_wipe1 = CountertopWipe("Wipe1", side="Right")
     countertop_wipe2 = CountertopWipe("Wipe2", side="Left")
     arm_up_wipe1 = SetPredefinedArmPose("up", name="ArmUpWipe1")
+    
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     arm_start_wipe1 = SetPredefinedArmPose("start", name="ArmStartWipe1")
 
+
+    '''
+    Note Below Sequence not used
+    '''  
     countertop_wiping_sequence = py_trees.composites.Sequence("CountertopWipeSequence", children=[
         # go_to_center2,
         # go_to_countertop2,
@@ -1689,11 +1789,26 @@ def create_tree():
     marking_detect_pose1 = SetPredefinedArmPose("trash_detect", name="MarkingDetect1")
     marking_detect_far_pose1 = SetPredefinedArmPose("trash_detect_far", name="MarkingDetectFar1")
     marking_detect_left_pose1 = SetPredefinedArmPose("trash_detect_left", name="MarkingDetectLeft1")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     marking_detect_right_pose1 = SetPredefinedArmPose("trash_detect_right", name="MarkingDetectRight1")
+
     marking_detect_lf_pose1 = SetPredefinedArmPose("trash_detect_lf", name="MarkingDetectLf1")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     marking_detect_rf_pose1 = SetPredefinedArmPose("trash_detect_rf", name="MarkingDetectRf1")
+   
     marking_detect_left_far_pose1 = SetPredefinedArmPose("trash_detect_left_far", name="MarkingDetectLeftFar1")
+    
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     marking_detect_right_far_pose1 = SetPredefinedArmPose("trash_detect_right_far", name="MarkingDetectRightFar1")
+   
     marking_detect_lf_far_pose1 = SetPredefinedArmPose("trash_detect_lf_far", name="MarkingDetectLfFar1")
     marking_detect_rf_far_pose1 = SetPredefinedArmPose("trash_detect_rf_far", name="MarkingDetectRfFar1")
 
@@ -1703,8 +1818,17 @@ def create_tree():
     publish_check14 = PublishCheck(name="PublishCheck14", on_or_off="on")
     publish_check15 = PublishCheck(name="PublishCheck15", on_or_off="on")
     publish_check16 = PublishCheck(name="PublishCheck16", on_or_off="on")
+    
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     publish_check17 = PublishCheck(name="PublishCheck17", on_or_off="on")
+   
     publish_check18 = PublishCheck(name="PublishCheck18", on_or_off="on")
+    
+    '''
+    Note Below 2 can be deleted not used anywhere.
+    '''  
     publish_check19 = PublishCheck(name="PublishCheck19", on_or_off="on")
     publish_check20 = PublishCheck(name="PublishCheck20", on_or_off="on")
 
@@ -1714,12 +1838,25 @@ def create_tree():
     publish_check_off14 = PublishCheck(name="PublishCheck14", on_or_off="off")
     publish_check_off15 = PublishCheck(name="PublishCheck15", on_or_off="off")
     publish_check_off16 = PublishCheck(name="PublishCheck16", on_or_off="off")
+    
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     publish_check_off17 = PublishCheck(name="PublishCheck17", on_or_off="off")
+    
     publish_check_off18 = PublishCheck(name="PublishCheck18", on_or_off="off")
+    
+    '''
+    Note Below 2 can be deleted not used anywhere.
+    '''  
     publish_check_off19 = PublishCheck(name="PublishCheck19", on_or_off="off")
     publish_check_off20 = PublishCheck(name="PublishCheck20", on_or_off="off")
 
     start_marking_fusion1 = StartFusion(name="MarkingFusion1", item="marking")
+    
+    '''
+    Note Below 15 can be deleted not used anywhere.
+    '''  
     start_marking_fusion2 = StartFusion(name="MarkingFusion2", item="marking")
     start_marking_fusion3 = StartFusion(name="MarkingFusion3", item="marking")
     start_marking_fusion4 = StartFusion(name="MarkingFusion4", item="marking")
@@ -1727,7 +1864,6 @@ def create_tree():
     start_marking_fusion6 = StartFusion(name="MarkingFusion6", item="marking")
     start_marking_fusion7 = StartFusion(name="MarkingFusion7", item="marking")
     start_marking_fusion8 = StartFusion(name="MarkingFusion8", item="marking")
-
     end_marking_fusion1 = EndFusion(name="EndMarkingFusion1")
     end_marking_fusion2 = EndFusion(name="EndMarkingFusion2")
     end_marking_fusion3 = EndFusion(name="EndMarkingFusion3")
@@ -1743,8 +1879,17 @@ def create_tree():
     marking_detect4 = MarkingDetect(name="MD4")
     marking_detect5 = MarkingDetect(name="MD5")
     marking_detect6 = MarkingDetect(name="MD6")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     marking_detect7 = MarkingDetect(name="MD7")
+    
     marking_detect8 = MarkingDetect(name="MD8")
+    
+    '''
+    Note Below 2 can be deleted not used anywhere.
+    '''  
     marking_detect9 = MarkingDetect(name="MD9")
     marking_detect10 = MarkingDetect(name="MD10")
 
@@ -1754,8 +1899,17 @@ def create_tree():
     marking_stop4 = MarkingDetectStop(name="MS4")
     marking_stop5 = MarkingDetectStop(name="MS5")
     marking_stop6 = MarkingDetectStop(name="MS6")
+
+    '''
+    Note Below 1 can be deleted not used anywhere.
+    '''  
     marking_stop7 = MarkingDetectStop(name="MS7")
+    
     marking_stop8 = MarkingDetectStop(name="MS8")
+    
+    '''
+    Note Below 2 can be deleted not used anywhere.
+    '''  
     marking_stop9 = MarkingDetectStop(name="MS9")
     marking_stop10 = MarkingDetectStop(name="MS10")
 
